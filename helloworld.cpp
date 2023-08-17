@@ -1,4 +1,4 @@
-#include <iostream> //ekrandan veri almak ve yazdırmak için kullanılır.
+#include <iostream> //ekrandan veri almak ve yazdÃ½rmak iÃ§in kullanÃ½lÃ½r.
 
 using namespace std;
 
