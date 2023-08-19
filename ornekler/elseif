@@ -1,0 +1,48 @@
+//if/else ornek1
+#include <iostream> //input output kutuphanesi
+
+using namespace std;
+
+int main()
+{
+    int sayi1,sayi2;
+    cout << "lutfen birinci sayiyi giriniz: ";
+    cin >> sayi1;
+    cout << endl ;
+    cout << "lutfen ikinci sayiyi giriniz :";
+    cin >> sayi2;
+
+    int islem;
+    float sonuc;
+    cout << "lutfen isleminiz giriniz :(1=+ , 2=- ,3=* ,4=/)";
+    cout << endl;
+    cin >> islem;
+
+    if(islem==1)
+    {
+        sonuc=sayi1+sayi2;
+        cout << "sonuc="<<sonuc;
+    }
+    else if(islem==2)
+    {
+        sonuc=sayi1-sayi2;
+        cout << "sonuc="<<sonuc;
+
+    }
+    else if(islem ==3)
+    {
+        sonuc=sayi1*sayi2;
+        cout << "sonuc="<<sonuc;
+    }
+    else if(islem ==4)
+    {
+        sonuc=sayi1/sayi2;
+        cout << "sonuc="<<sonuc;
+    }
+    else
+    {
+        cout << "girdiginiz sayi bir islem icermiyor.";
+    }
+
+    return 0;
+}
