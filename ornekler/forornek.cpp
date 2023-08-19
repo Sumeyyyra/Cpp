@@ -1,6 +1,7 @@
 //kullanicidan aldigi sayinin faktoriyelini alan kod
 #include <iostream> //input output kutuphanesi
-
+//break: dçonguyu sonlandirir
+//continue : altında kalan kısmı atlar döngünün başına döner.
 using namespace std;
 
 int main()
