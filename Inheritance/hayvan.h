@@ -14,7 +14,8 @@ public:
     string getIsim();
 
 
-private:
+private://protected yapsaydık getIsime setIsime gerek kalmıyo alt sınıflarda kulllanırız bu sayede 
+//sadece alt sınıflar görüp kullanır.
     string isim;
 
 };
