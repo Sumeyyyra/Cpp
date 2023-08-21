@@ -1,6 +1,6 @@
 //OOP header dosyasiyla yapma
 #include <iostream> //input output kutuphanesi
-#include "otomobil.h"
+#include "otomobil2.h"
 
 using namespace std;
 
