@@ -1,0 +1,60 @@
+//main.cpp
+//Inheritance/Kalıtım
+//Kalıtım bir sınıfın üst sınıfdan bazı özellikleri miras almasına denir.Bazı programlama dilinde yasak birden fazla kalıtım yapmak(java)
+#include <iostream> //input output kutuphanesi
+#include "hayvan.h"
+#include "kedi.h"
+#include "kopek.h"
+#include "kus.h"
+using namespace std;
+
+int Kopek::kopekSayisi =0;//static bilgisni burda 0 a eşitliyoruz
+
+int main()
+{
+    Kopek h("boncuk");
+    h.beslen();
+    h.uyu();
+    h.havla();
+    cout << endl << "kopek sayisi: "<< Kopek::kopekSayisi ;
+    return 0;
+}
+//kopek.h
+#pragma once
+#include "hayvan.h"
+
+//Inheritance oluşturduk kedi için
+class Kopek : public Hayvan{
+
+public:
+    Kopek(string ad);
+    ~Kopek();
+    void havla();
+    static int kopekSayisi;//uretilen kopek sayisini vericek
+};
+
+//kopek.cpp
+#include "kopek.h"
+
+//Constructor
+Kopek::Kopek(string ad) : Hayvan(ad) {
+    // Kedinin constructoru oluştururken hayvanın constructorunu da çağırdık
+    // Ona gelecek "ad" parametresini Hayvan'a gönderdik
+    // Ek yapılacak işlemler buraya yazılabilir
+    kopekSayisi++;
+}
+
+//Destructor
+Kopek::~Kopek()
+{
+
+    kopekSayisi--;
+}
+void Kopek::havla(){
+
+    cout << Hayvan::getIsim() << " havliyor.." ;
+
+}
+
+
+
